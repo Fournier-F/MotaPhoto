@@ -1,0 +1,61 @@
+/* GLOBAL */
+/* ------ */
+
+
+/* FONTS */
+/* ----- */
+
+@font-face {
+    font-family: 'SpaceMono';
+    src: url('../fonts/SpaceMono-Regular.ttf') format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SpaceMono-bold';
+    src: url('../fonts/SpaceMono-Bold.ttf') format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SpaceMono-BoldItalic';
+    src: url('../fonts/SpaceMono-BoldItalic.ttf') format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SpaceMono-Italic';
+    src: url('../fonts/SpaceMono-Italic.ttf') format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Regular.ttf') format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins-Italic';
+    src: url('../fonts/Poppins-Italic.ttf') format('truetype');
+    font-display: swap;
+}
+
+
+/* BODY */
+/* ---- */
+
+body {
+    font-family: SpaceMono;
+	font-weight: 400;
+    margin: 0px;
+}
+
+
+/* SITE */
+/* ---- */
+
+.site {
+    width: 100%;
+    margin: 0 auto;
+}

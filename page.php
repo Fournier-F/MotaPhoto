@@ -16,7 +16,10 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
-
+		
+		<h1><?php echo get_the_title(); ?></h1>
+		<?php the_content(); ?>
+		
 		<?php
 		while ( have_posts() ) :
 			the_post();
@@ -27,7 +30,6 @@ get_header();
 			if ( comments_open() || get_comments_number() ) :
 				comments_template();
 			endif;
-
 		endwhile; // End of the loop.
 		?>
 

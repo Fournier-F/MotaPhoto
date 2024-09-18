@@ -1,0 +1,30 @@
+/* FOOTER */
+/* ------ */
+
+.site-footer {
+	font-size: 16px;
+
+	.footer {
+		text-align: center;
+		border-top: 1px solid #000000;
+		
+		ul {
+			list-style: none;
+
+			li {
+				display: inline;
+				padding: 0px 50px;
+				
+				a {
+					text-decoration: none;
+					text-transform: uppercase;
+					color: #000000;
+				}
+			}
+		}
+		
+		#menu-item-27:hover, #menu-item-28:hover {
+			font-weight: 700;
+		}
+	}
+}
