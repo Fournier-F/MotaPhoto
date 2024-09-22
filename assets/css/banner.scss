@@ -1,0 +1,32 @@
+/* BANNER */
+/* ------ */
+
+.banner {
+    height: 962px;
+    min-height: 962px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    text-align: center;   
+
+    img {
+        object-fit: cover;     
+    }
+	
+    .text {
+        font-family: 'SpaceMono-BoldItalic';
+		font-weight: 500;
+        font-size: 110px;
+        text-transform: uppercase;
+        display: block;
+        z-index: 50;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        transform: translate(-50%, -50%);
+        color: transparent;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: #FFFFFF;
+    }
+}

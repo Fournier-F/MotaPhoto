@@ -1,0 +1,41 @@
+/* FILTERS */
+/* ------- */
+
+
+.filters {
+	display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width:80%;
+    margin: 80px auto 0 auto;
+        
+    div {
+        width:50%
+    }
+	
+    div:last-child {
+        width:50%;
+        text-align: right;    
+        
+		select {
+            margin-right: 0;
+        }   
+    }
+	
+    select {
+        width:40%;
+        padding: 10px;
+        text-transform: uppercase;
+		font-family: 'Poppins';
+        font-size: 12px;
+		font-weight: 500;
+        border-radius: 8px;
+        border-color: #B8BBC2;
+		margin-right: 25px;
+
+		option:checked {
+			background-color: #E00000;
+			color: #FFFFFF;
+		}
+	}
+}

@@ -11,6 +11,15 @@ function theme_enqueue_styles() {
 	// Header Style
 	wp_enqueue_style( 'header-style', get_template_directory_uri() . '/assets/css/header.scss' );
 	
+	// Banner Style
+	wp_enqueue_style( 'banner-style', get_template_directory_uri() . '/assets/css/banner.scss' );
+	
+	// Filters Style
+	wp_enqueue_style( 'filter-style', get_template_directory_uri() . '/assets/css/filters.scss' );
+	
+	// PhotosList Style
+	wp_enqueue_style( 'photoslist-style', get_template_directory_uri() . '/assets/css/photoslist.scss' );
+	
 	// Footer Style
 	wp_enqueue_style( 'footer-style', get_template_directory_uri() . '/assets/css/footer.scss' );
 
@@ -33,7 +42,7 @@ function theme_enqueue_scripts() {
 		wp_enqueue_script( 'footer-modal-script', get_theme_file_uri( '/assets/javascript/modal.js' ), array('jquery'), '1.0.0', true );
 } 
 
- add_action( 'init', 'register_menus' );
+add_action( 'init', 'register_menus' );
 function register_menus() {
 	register_nav_menus(
 		array(
@@ -43,3 +52,13 @@ function register_menus() {
 	);
 }
 
+function returnTaxonomies($taxonomy) {
+    $values = get_terms( array(
+        'taxonomy' => $taxonomy,
+        'hide_empty' => false
+    ));        
+    foreach ( $values as $value ) {
+        echo '<option value=' . $value->slug .'>' . $value->name . '</option>';
+    }
+
+}
