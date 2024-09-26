@@ -60,13 +60,14 @@ body {
     margin: 0 auto;
 }
 
+
 /* HOME */
 /* ---- */
 
 #primary {
-    padding: 0 0 40px 0;
 
-    .banner {	
+    .banner {
+	
         img {
             object-fit: cover;
 			width: 100%;
@@ -77,3 +78,4 @@ body {
         width: 100%
     }
 }
+

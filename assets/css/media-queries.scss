@@ -4,10 +4,17 @@
 /* HEADER */
 /* ------ */
 
+	#masthead {
+		background: #FFFFFF;
+		position: sticky;
+		top: 0;
+		z-index: 500;
+	}
+
     .menu-header {
         height: 32px;
         padding: 16px 25px 16px 25px;
-
+		
         .logo-header {
             width: 100%;
 
@@ -64,6 +71,7 @@
 		}
     }
 
+
 /* BANNER */
 /* ------ */
 
@@ -94,6 +102,82 @@
             margin: 5px 0px;
         }
     }
+
+
+/* PHOTOSLIST */
+/* ---------- */
+
+	.photos {
+        width: 90%;
+        gap: 16px;
+        .photo {
+            width: 100%;
+            height: 278px;
+        }
+    }
+	
+
+/* DISPLAYPHOTOS */
+/* ------------- */
+
+	.photos {
+
+		.photo {
+
+			&:hover {
+			
+				.refandcateg {
+					width: 90%;
+				
+					div {
+						font-size: 14px;
+					}
+				}
+			}
+		}
+	}	
+
+
+/* LIGHTBOX */
+/* -------- */
+
+	.lightbox {
+		
+		.lightbox-content {
+			width: 80%;
+			height: auto;
+			padding-top: 100px;
+			
+			.photo {
+				width:100%;
+				height: 40%;
+				margin-bottom: 16px;
+				
+				img {
+					height:100%;
+				}
+			}	
+		}
+		
+		.photo-previous {
+			top: 90%;
+			left: 32px;
+		}
+		
+		.photo-next {
+			top: 90%;
+			right: 32px;
+		}
+		
+		.lightbox-close {
+			width: 16px;
+			height: 16px;
+			top: 80px;
+			right: 16px;
+		}
+	}
+
+    
 	
 	
 /* FOOTER */

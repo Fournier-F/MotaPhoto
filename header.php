@@ -30,18 +30,23 @@
 
 		<header id="masthead" class="site-header">
 
-			<!--Menu header à insérer ici-->  
 			<div class="menu-header">
+			
+				<!-- Logo du site de Nathalie Mota -->
 				<div class="logo-header">
 					<a href="/MotaPhoto" title="Accueil du site de Nathalie Mota">
 						<img src="<?php echo get_template_directory_uri() . '/assets/images/Logo_Nathalie_Mota.webp'; ?> " alt="Logo Nathalie Mota" />
 					</a>
 				</div>
+
+				<!-- Menu burger -->
 				<div class="menu-burger">
-					<!-- Nouvelle zone de menu -->
 					<div id="menu-links">
+						<!-- Insertion du menu header -->
 						<?php wp_nav_menu( array( 'theme_location' => 'menu-header', 'container_class' => 'header' ) ); ?>
 					</div>
+
+					<!-- Icônes du menu burger pour le téléphone -->
 					<div class="menu-burger-icons">
 						<div class="menu-burger-icon-open">
 							<img src="<?php echo get_template_directory_uri() . '/assets/images/Burger_open.webp'; ?> " alt="Icone pour ouvrir le memu burger" />
@@ -51,6 +56,7 @@
 						</div>
 					</div>
 				</div>
+
 			</div>		
 		  
 		</header><!-- #masthead -->
