@@ -11,9 +11,12 @@
     background-color: rgba(0,0,0,0.5);
     visibility: hidden;
     opacity: 0;
+	transition: all 1s;
+	z-index: 300;
 
     &.open {
 		visibility: visible;
+		transition: all 1s;
 		opacity: 1;
 	}
 	

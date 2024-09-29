@@ -1,5 +1,12 @@
 /* HEADER */
 /* ------ */
+
+#masthead {
+	background: #FFFFFF;
+	position: sticky;
+	top: 0;
+	z-index: 500;
+}
 	
 .site-header {
 	font-size: 16px;

@@ -1,9 +1,11 @@
 /* MODAL JAVASCRIPT */
 /* ---------------- */
 
+// Ouvrir et fermer la modale contact
 document.addEventListener('DOMContentLoaded', function () {
 
 	(function($) {
+		
 		var modal = document.getElementById("modalcontact");
 		var contactbuttons = document.querySelectorAll(".contact-button");
 

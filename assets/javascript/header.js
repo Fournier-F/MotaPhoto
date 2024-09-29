@@ -1,9 +1,11 @@
 /* MENU BURGER JAVASCRIPT */
 /* ---------------------- */
 
+// Ouvrir et fermer le menu burger
 document.addEventListener('DOMContentLoaded', function () {
 	
     (function($) {
+		
 		var menuburgericonopen = document.querySelector(".menu-burger-icon-open");
 		var menuburgericonclose = document.querySelector(".menu-burger-icon-close");
 		var menulinks = document.getElementById("menu-links");

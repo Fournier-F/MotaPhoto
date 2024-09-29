@@ -25,7 +25,7 @@ get_header();
 
 		endwhile; // End of the loop.
 		?>
-<div><span>single</span><div>
+	<div><span>single photo</span><div>
 	</main><!-- #main -->
 
 <?php

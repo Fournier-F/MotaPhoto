@@ -15,7 +15,7 @@
 
 		<footer class="site-footer">
 		
-			<!-- Insertion du menu footer -->
+			<!-- Insérer le menu footer -->
 			<div>
 				<?php wp_nav_menu( array( 'theme_location' => 'menu-footer', 'container_class' => 'footer' ) ); ?>                  
 			</div>
@@ -24,7 +24,7 @@
 		<?php wp_footer(); ?>
 	</body>
 
-	<!-- Insertion de la modal accéssible sur tout le site -->
+	<!-- Insérer la modale qui sera accessible sur tout le site -->
 	<?php get_template_part ( 'template-parts/modal' ); ?>
 
 </html>

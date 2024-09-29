@@ -1,9 +1,9 @@
 <!-- Afficher la liste des photos -->
-<div class="photos" id="photocontainer">
+<div class="photos" id="photoscontainer">
 
     <?php 
     
-	// Selectionner 8 photos par page
+		// Sélectionner les photos
 		$args = array(
 			'post_type' => 'photo',
 			'posts_per_page' => 8,
@@ -12,37 +12,30 @@
 			'paged' => 1
 		);    
     
-		$photos = new WP_Query( $args ); // Exécution appel WP Query
+		$photos = new WP_Query( $args );
 
-		$nbpages = $photos->nbpages;
+		// Sélectionner le nombre de pages
+		$nbmaxpages = $photos->max_num_pages;
 
-		$position = 1;
     
-		// Boucle pour l'affichage des 8 photos
+		// Afficher les photos
 		if( $photos->have_posts() ) : while( $photos->have_posts() ) : $photos->the_post();
 
-			// Affichage d'une photo
-			get_template_part ( 'template-parts/displayphotos' );
+			get_template_part ( 'template-parts/photosdisplay' );
 
-			$position ++;
 			endwhile;
 		endif; 
 
 		wp_reset_postdata();
     
 	?>
+	
 </div>
 
-<!-- Pour connaitre le nombre de pages -->
-<input type="hidden" name="nbpages" value="<?php echo $nbpages ?>">
+<!-- Sauvegarder le nombre de pages -->
+<input type="hidden" name="nbpages" value="<?php echo $nbmaxpages ?>">
 
-<!-- Affichage ou suppression du bouton Charger plus -->
+<!-- Afficher le bouton pour afficher plus de photos -->
 <div id="loadmore" class="center">
-    <button class="btn btn-default" id="morephotos" title="Charger plus de photos">
-        Charger plus
-    </button>
+    <button class="btn btn-default" id="morephotos" title="Charger plus de photos">Charger plus</button>
 </div>
-
-<?php 
-	get_template_part ( 'template-parts/lightbox' );
-?>
