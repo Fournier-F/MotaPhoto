@@ -6,9 +6,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	(function($) {
 		
-		var modal = document.getElementById("modalcontact");
+		var modalcontact = document.getElementById("modalcontact");
 		var contactbuttons = document.querySelectorAll(".contact-button");
-
+		var photoreference = document.querySelector(".photoreference");
+		
 		var menuburgericonopen = document.querySelector(".menu-burger-icon-open");
 		var menuburgericonclose = document.querySelector(".menu-burger-icon-close");
 		var menulinks = document.getElementById("menu-links");
@@ -20,14 +21,21 @@ document.addEventListener('DOMContentLoaded', function () {
 				menuburgericonopen.style.display = "block"; 
 				menulinks.classList.remove("open");			
 				menulinks.style.display = "block";
-			
-				modal.classList.add("open");
+
+				if (photoreference) {
+					const photo_ref = photoreference.getAttribute("data-photoreference").toUpperCase();                
+					document.getElementById("wpforms-38-field_3").setAttribute('value', photo_ref);
+					document.getElementById("wpforms-38-field_3").innerHTML = "value = " + "'" + document.getElementById("wpforms-38-field_3").value + "'";
+				}
+				
+				modalcontact.classList.add("open");
+				
 			});
 		});
 		
 		window.addEventListener("click", function(event) {
-			if (event.target == modal) {
-				modal.classList.remove("open");
+			if (event.target == modalcontact) {
+				modalcontact.classList.remove("open");
 			}
 		});
 		

@@ -24,6 +24,9 @@ function theme_enqueue_styles() {
 	
 	// Display Photos Style
 	wp_enqueue_style( 'photosdisplay-style', get_template_directory_uri() . '/assets/css/photosdisplay.scss' );
+		
+	// Photo Detail Style
+	wp_enqueue_style( 'photodetail-style', get_template_directory_uri() . '/assets/css/photodetail.scss' );
 	
 	// Lightbox Style
 	wp_enqueue_style( 'lightbox-style', get_template_directory_uri() . '/assets/css/lightbox.scss' );
@@ -47,7 +50,10 @@ function theme_enqueue_scripts() {
 	
 	// Header Scripts
 	wp_enqueue_script( 'header-script', get_theme_file_uri( '/assets/javascript/header.js' ), array('jquery'), '1.0.0', true );
-
+	
+	// Photo Detail Scripts
+	wp_enqueue_script( 'photodetail-script', get_theme_file_uri( '/assets/javascript/photodetail.js' ), array('jquery'), '1.0.0', true );
+	
 	// Lightbox Scripts
 	wp_enqueue_script( 'lightbox-script', get_theme_file_uri( '/assets/javascript/lightbox.js' ), array('jquery'), '1.0.0', true );
 	wp_localize_script('lightbox-script', 'ajax_call', array('ajaxurl' => admin_url('admin-ajax.php')));
@@ -94,8 +100,8 @@ add_action('wp_ajax_nopriv_refresh_photos_ajax', 'refresh_photos_ajax_router');
 // Sécuriser l'utilisation d'ajax
 function refresh_photos_ajax_router(): string
 {	
-    // Vérifer la sécurité
-    if (!in_array($_POST['function'], ["refresh_photos_ajax"]))  /* Nom de la fonction JS*/
+    // Vérifer la sécurité pour la fonction Javascript
+    if (!in_array($_POST['function'], ["refresh_photos_ajax"]))
     {
         die();
     }

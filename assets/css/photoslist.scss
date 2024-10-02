@@ -9,7 +9,6 @@
     width: 80%;
 	row-gap: 23px;
     margin: 32px auto;
-    display: flex;
 
     img {
         object-fit: cover;
@@ -25,29 +24,5 @@
 	
     #morephotos {
         cursor: pointer;
-    }
-}
-
-button {
-    border: none;
-	font-family: SpaceMono;
-    font-size: 12px;
-}
-
-
-.btn {
-    &.btn-default {
-        background: #D8D8D8;
-        text-align: center;
-        padding: 18px 64px;
-        width: 274px;
-        display: inline-block;
-        border-radius: 2px;
-        transition: background-color 1s linear;
-        
-		&:hover {
-            background-color: #000000;
-            color: #FFFFFF;
-        }
     }
 }

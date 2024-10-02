@@ -21,6 +21,7 @@
 		// Afficher les photos
 		if( $photos->have_posts() ) : while( $photos->have_posts() ) : $photos->the_post();
 
+			// Afficher la photo
 			get_template_part ( 'template-parts/photosdisplay' );
 
 			endwhile;
