@@ -28,8 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
 					document.getElementById("wpforms-38-field_3").innerHTML = "value = " + "'" + document.getElementById("wpforms-38-field_3").value + "'";
 				}
 				
-				modalcontact.classList.add("open");
-				
+				modalcontact.classList.add("open");	
 			});
 		});
 		

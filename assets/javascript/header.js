@@ -14,14 +14,17 @@ document.addEventListener('DOMContentLoaded', function () {
 			menuburgericonclose.style.display = "block";
 			menulinks.classList.add("open");
 			menulinks.style.display = "block";
-
+			setTimeout(() => {
+                menulinks.style.opacity = '1';
+            }, 500);
 		});
+		
 		$(".menu-burger-icon-close").click(function () {
 			menuburgericonclose.style.display = "none";
 			menuburgericonopen.style.display = "block"; 
 			menulinks.classList.remove("open");			
 			menulinks.style.display = "block";
-
+			menulinks.style.opacity = '0';	
 		});
 	
 		$(".header.a").click(function () {
@@ -29,6 +32,10 @@ document.addEventListener('DOMContentLoaded', function () {
 			menuburgericonopen.style.display = "block"; 
 			menulinks.classList.remove("open");			
 			menulinks.style.display = "block";
+			
+			menulinks.style.opacity = '0';
+			
+			
 		});  
 		
 	})(jQuery);

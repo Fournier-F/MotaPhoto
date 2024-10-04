@@ -25,6 +25,8 @@
 	#menu-links {
         display: none;
         visibility: hidden;
+		opacity: 0;
+		transition: opacity 0.5s ease-in-out;
     }
 	
     .menu-burger-icons {
@@ -37,7 +39,7 @@
 		cursor: pointer;
 		
 		.menu-burger-icon-close {
-            display: none
+            display: none;
         }
     }
 	
@@ -264,7 +266,7 @@
 /* MODAL */
 /* ----- */
 
-	.modal {       
+	.modal {      
 			
 		.modal-content {
 			width: 55%;
